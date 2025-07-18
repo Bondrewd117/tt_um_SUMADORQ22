@@ -16,7 +16,6 @@ module tt_um_SUMADORQ22 (
     input  wire       rst_n     // reset_n - low to reset
 );
  assign uio_oe  = 8'b0000_0000;
- wire spike_none;
  wire [4:0] a;
  wire [4:0] b;
  wire [5:0] c;
