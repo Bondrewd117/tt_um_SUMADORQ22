@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_example (
+module tt_um_SUMADORQ22 (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -15,13 +15,26 @@ module tt_um_example (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+ assign uio_oe  = 8'b0000_0000;
+ wire spike_none;
+ wire [4:0] a;
+ wire [4:0] b;
+ wire [5:0] c;
 
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+ 
+assign a =ui_in[4:0];
+assign uo_out[5:0] = c;
+assign b = uio_in[4:0];
+assign uo_out[7:6] = 2'h0;
 
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+ SUMADORQ22 SUMADORQ22_Unit(
+    .clk(clk),
+    .rst(rst_n),
+    .a(a), 
+    .b(b),
+    .c(c)
+);
+
+  wire _unused = &{ena, uio_in[7:5],ui_in[7:5], uio_out, 1'b0};
 
 endmodule
