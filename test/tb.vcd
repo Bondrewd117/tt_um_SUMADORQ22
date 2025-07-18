@@ -1,0 +1,261 @@
+$date
+	Thu Jul 17 17:03:03 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 5 ! a [4:0] $end
+$var wire 5 " b [4:0] $end
+$var wire 8 # ui_in [7:0] $end
+$var wire 8 $ uio_in [7:0] $end
+$var wire 8 % uio_oe [7:0] $end
+$var wire 8 & uio_out [7:0] $end
+$var wire 8 ' uo_out [7:0] $end
+$var wire 6 ( c [5:0] $end
+$var reg 1 ) clk $end
+$var reg 1 * ena $end
+$var reg 1 + rst_n $end
+$scope module user_project $end
+$var wire 1 ) clk $end
+$var wire 1 * ena $end
+$var wire 1 + rst_n $end
+$var wire 8 , ui_in [7:0] $end
+$var wire 8 - uio_in [7:0] $end
+$var wire 8 . uio_oe [7:0] $end
+$var wire 8 / uio_out [7:0] $end
+$var wire 8 0 uo_out [7:0] $end
+$var wire 6 1 c [5:0] $end
+$var wire 5 2 b [4:0] $end
+$var wire 5 3 a [4:0] $end
+$var wire 1 4 _unused $end
+$scope module SUMADORQ22_Unit $end
+$var wire 5 5 a [4:0] $end
+$var wire 5 6 b [4:0] $end
+$var wire 1 ) clk $end
+$var wire 1 + rst $end
+$var reg 6 7 a_extended [5:0] $end
+$var reg 6 8 b_extended [5:0] $end
+$var reg 6 9 c [5:0] $end
+$var reg 5 : magnitude_a [4:0] $end
+$var reg 5 ; magnitude_b [4:0] $end
+$var reg 6 < sum_extended [5:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+bz 6
+bz 5
+04
+bz 3
+bz 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0zzzzz -
+b0zzzzz ,
+1+
+1*
+1)
+b0 (
+b0 '
+b0 &
+b0 %
+b0zzzzz $
+b0zzzzz #
+bz "
+bz !
+$end
+#50000
+0)
+#100000
+0+
+1)
+#150000
+0)
+#200000
+b110 2
+b110 6
+b0 3
+b0 5
+b110 $
+b110 -
+b0 #
+b0 ,
+b0xxxx (
+b0xxxx '
+b0xxxx 0
+b0xxxx 1
+b0xxxx 9
+bx <
+bx 8
+bx 7
+b0zzzz ;
+b0zzzz :
+1)
+#250000
+0)
+#300000
+b110 (
+b110 '
+b110 0
+b110 1
+b110 9
+1)
+#350000
+0)
+#400000
+1)
+#450000
+0)
+#500000
+1)
+#550000
+0)
+#600000
+1)
+#650000
+0)
+#700000
+1)
+#750001
+0)
+#800001
+b0 (
+b0 '
+b0 0
+b0 1
+b0 9
+b0 ;
+b0 :
+b0 <
+b0 8
+b0 7
+1+
+1)
+#850001
+0)
+#900001
+0+
+1)
+#950001
+0)
+#1000001
+b0 2
+b0 6
+b1101 3
+b1101 5
+b0 $
+b0 -
+b1101 #
+b1101 ,
+b110 (
+b110 '
+b110 0
+b110 1
+b110 9
+1)
+#1050001
+0)
+#1100001
+b1101 (
+b1101 '
+b1101 0
+b1101 1
+b1101 9
+1)
+#1150001
+0)
+#1200001
+1)
+#1250001
+0)
+#1300001
+1)
+#1350001
+0)
+#1400001
+1)
+#1450001
+0)
+#1500001
+1)
+#1550002
+0)
+#1600002
+b0 (
+b0 '
+b0 0
+b0 1
+b0 9
+1+
+1)
+#1650002
+0)
+#1700002
+0+
+1)
+#1750002
+0)
+#1800002
+b1101 (
+b1101 '
+b1101 0
+b1101 1
+b1101 9
+1)
+#1850002
+0)
+#1900002
+b101 2
+b101 6
+b101 3
+b101 5
+b101 $
+b101 -
+b101 #
+b101 ,
+1)
+#1950002
+0)
+#2000002
+b1010 (
+b1010 '
+b1010 0
+b1010 1
+b1010 9
+b1010 <
+b101 8
+b101 7
+b101 ;
+b101 :
+1)
+#2050002
+0)
+#2100002
+1)
+#2150002
+0)
+#2200002
+1)
+#2250002
+0)
+#2300002
+1)
+#2350002
+0)
+#2400002
+1)
+#2400003
