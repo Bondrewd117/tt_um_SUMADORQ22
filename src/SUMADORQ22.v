@@ -5,13 +5,11 @@ module SUMADORQ22(
     input wire [4:0] b,
     output reg [5:0] c
 );
-    reg [5:0] a_extended, b_extended, sum_extended;
+    reg [5:0] sum_extended;
     reg [4:0] magnitude_a, magnitude_b;
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            a_extended <= 0;
-            b_extended <= 0;
             sum_extended <= 0;
             magnitude_a <= 0;
             magnitude_b <= 0;
@@ -32,9 +30,7 @@ module SUMADORQ22(
             else begin
                 magnitude_a <= {1'b0, a[3:0]};
                 magnitude_b <= {1'b0, b[3:0]};
-                a_extended <=  magnitude_a;
-                b_extended <=  magnitude_b;
-                sum_extended <= a_extended + b_extended;       
+                sum_extended <= magnitude_a + magnitude_b;       
                 if (sum_extended[5]) begin
                     c <= {2'b10, -sum_extended[3:0]};
                 end
