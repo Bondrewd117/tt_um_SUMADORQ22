@@ -32,8 +32,8 @@ module SUMADORQ22(
             else begin
                 magnitude_a <= {1'b0, a[3:0]};
                 magnitude_b <= {1'b0, b[3:0]};
-                a_extended <= a[4] ? -magnitude_a : magnitude_a;
-                b_extended <= b[4] ? -magnitude_b : magnitude_b;
+                a_extended <=  magnitude_a;
+                b_extended <=  magnitude_b;
                 sum_extended <= a_extended + b_extended;       
                 if (sum_extended[5]) begin
                     c <= {2'b10, -sum_extended[3:0]};
