@@ -15,25 +15,25 @@ module tt_um_SUMADORQ22 (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
- assign uio_oe  = 8'b0000_0000;
- wire [4:0] a;
- wire [4:0] b;
- wire [5:0] c;
+    assign uio_oe  = 8'b0000_0000;  // Set all IOs as inputs
+    assign uio_out = 8'b0000_0000;  // Drive outputs to 0 when not used
+    
+    wire [4:0] a;
+    wire [4:0] b;
+    wire [5:0] c;
 
- 
-assign a =ui_in[4:0];
-assign uo_out[5:0] = c;
-assign b = uio_in[4:0];
-assign uo_out[7:6] = 2'h0;
+    assign a = ui_in[4:0];
+    assign uo_out[5:0] = c;
+    assign b = uio_in[4:0];
+    assign uo_out[7:6] = 2'h0;
 
- SUMADORQ22 SUMADORQ22_Unit(
-    .clk(clk),
-    .rst(rst_n),
-    .a(a), 
-    .b(b),
-    .c(c)
-);
+    SUMADORQ22 SUMADORQ22_Unit(
+        .clk(clk),
+        .rst(rst_n),
+        .a(a), 
+        .b(b),
+        .c(c)
+    );
 
-  wire _unused = &{ena, uio_in[7:5],ui_in[7:5], uio_out, 1'b0};
-
+    wire _unused = &{ena, uio_in[7:5], ui_in[7:5], 1'b0};
 endmodule
