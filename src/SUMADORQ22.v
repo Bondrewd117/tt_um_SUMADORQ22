@@ -10,11 +10,11 @@ module SUMADORQ22(
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            a_extended = 0;
-            b_extended = 0;
-            sum_extended = 0;
-            magnitude_a = 0;
-            magnitude_b = 0;
+            a_extended <= 0;
+            b_extended <= 0;
+            sum_extended <= 0;
+            magnitude_a <= 0;
+            magnitude_b <= 0;
             c <= 0;
         end
 
@@ -30,11 +30,11 @@ module SUMADORQ22(
             end
 
             else begin
-                magnitude_a = {1'b0, a[3:0]};
-                magnitude_b = {1'b0, b[3:0]};
-                a_extended = a[4] ? -magnitude_a : magnitude_a;
-                b_extended = b[4] ? -magnitude_b : magnitude_b;
-                sum_extended = a_extended + b_extended;       
+                magnitude_a <= {1'b0, a[3:0]};
+                magnitude_b <= {1'b0, b[3:0]};
+                a_extended <= a[4] ? -magnitude_a : magnitude_a;
+                b_extended <= b[4] ? -magnitude_b : magnitude_b;
+                sum_extended <= a_extended + b_extended;       
                 if (sum_extended[5]) begin
                     c <= {2'b10, -sum_extended[3:0]};
                 end
